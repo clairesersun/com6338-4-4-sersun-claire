@@ -52,7 +52,9 @@ window.addEventListener('keydown', function (e) {
         }
       } else {
         remainingGuesses--;
+        document.querySelector("#remaining-guesses").innerHTML = remainingGuesses;
         incorrectLetters.push(keystroke);
+        document.querySelector("#incorrect-letters").innerHTML = incorrectLetters;
         if(remainingGuesses === 0) {
           losses++
         }}}
