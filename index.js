@@ -56,7 +56,6 @@ document.onkeyup = function(e) {
   }
   // Create an if statement where if the user runs out of guesses, then we would add to the loss variable, add the word to the previous word section, and then run a new game using the new game function created below.
   if (guessesLeft <= 0) { //If guesses left is less than or equal to 0. Once the user hits 0 we want to make sure that the game ends
-    end
     losses++
     lossDisplay.textContent = losses
     previousWord.textContent = randomWord
