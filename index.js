@@ -29,7 +29,7 @@ var guessesLeft = 10
 // this will be an array that will be storing the correctLetters the user is typing in
 var correctLetters = ['']
 var randomWord = words[Math.floor(Math.random()*words.length)]
-var hiddenWord = randomWord.replace(/[a-z]/g, '_')
+var hiddenWord = randomWord.replace(/a-z/g, '_')
 
 
 // Onkeyup functionality
@@ -84,9 +84,10 @@ document.onkeyup = function(e) {
       if (randomWord.includes(letterGuessed)) {
         debugger
         //display that letter
-        wordToGuess.textContent = hiddenWord.replace('_', letterGuessed)
+        wordToGuess.textContent = randomWord.replace('_', letterGuessed).chars.join(' ')
+        //hiddenWord.replace('_', letterGuessed)
         //hiddenWord.replace(document.onkeyup.key)
-        console.log(hiddenWord.replace('_', letterGuessed))
+        console.log(randomWord.replace(letterGuessed, '_').chars.join(' '))
       } else {
         //display underscore
           // Letters are replaced with underscores
