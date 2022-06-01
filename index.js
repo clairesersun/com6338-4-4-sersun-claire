@@ -61,6 +61,7 @@ document.onkeyup = function(e) {
     previousWord.textContent = randomWord
     //run the new game function to run a new game
     newGame()
+    return
   }}
   
   // Function for new game
