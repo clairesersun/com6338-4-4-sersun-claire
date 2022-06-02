@@ -38,7 +38,7 @@ document.onkeyup = function(e) {
   var key = e.key.toLowerCase()
   // Create if/elseif statement where if the right letter is pressed then we will push() that letter to the letterGuessed array. Else if the wrong letter is pressed, it will be pushed to the lettersWrongArr array. You would also subtract from the guessesLeft variable
   if (randomWord.includes(key) && correctLetters.indexOf(key) === -1) { 
-    letterGuessed.push(key)
+    correctLetters.push(key)
   } else if (!randomWord.includes(key) && incorrectLettersArr.indexOf(key) === -1) {
     incorrectLettersArr.push(key)
     guessesLeft--
